@@ -1,5 +1,6 @@
 import 'package:platia/models/class_schedule.dart';
-import 'package:platia/models/pilates_class.dart';
+import 'package:platia/models/studio.dart';
+import 'package:platia/models/wellness_class.dart';
 
 class FilterOptions {
   final DateTime? startDate;
@@ -9,6 +10,12 @@ class FilterOptions {
   final List<String>? classIds;
   final List<ClassDifficulty>? difficulties;
   final List<ClassScheduleStatus>? statuses;
+  final List<ClassCategory>?
+  categories; // Supported categories: yoga, pilates, meditation
+  final List<ClassType>?
+  types; // Supported class types: yoga, pilates, meditation
+  final List<StudioType>?
+  studioTypes; // Supported studio types: yoga, pilates, meditation
   final String? searchQuery;
 
   FilterOptions({
@@ -19,6 +26,9 @@ class FilterOptions {
     this.classIds,
     this.difficulties,
     this.statuses,
+    this.categories,
+    this.types,
+    this.studioTypes,
     this.searchQuery,
   });
 
@@ -30,6 +40,9 @@ class FilterOptions {
     List<String>? classIds,
     List<ClassDifficulty>? difficulties,
     List<ClassScheduleStatus>? statuses,
+    List<ClassCategory>? categories,
+    List<ClassType>? types,
+    List<StudioType>? studioTypes,
     String? searchQuery,
   }) {
     return FilterOptions(
@@ -40,6 +53,9 @@ class FilterOptions {
       classIds: classIds ?? this.classIds,
       difficulties: difficulties ?? this.difficulties,
       statuses: statuses ?? this.statuses,
+      categories: categories ?? this.categories,
+      types: types ?? this.types,
+      studioTypes: studioTypes ?? this.studioTypes,
       searchQuery: searchQuery ?? this.searchQuery,
     );
   }
@@ -55,6 +71,13 @@ class FilterOptions {
           ?.map((d) => d.toString().split('.').last)
           .toList(),
       'statuses': statuses?.map((s) => s.toString().split('.').last).toList(),
+      'categories': categories
+          ?.map((c) => c.toString().split('.').last)
+          .toList(),
+      'types': types?.map((t) => t.toString().split('.').last).toList(),
+      'studioTypes': studioTypes
+          ?.map((st) => st.toString().split('.').last)
+          .toList(),
       'searchQuery': searchQuery,
     };
   }
@@ -67,6 +90,9 @@ class FilterOptions {
         (classIds?.isEmpty ?? true) &&
         (difficulties?.isEmpty ?? true) &&
         (statuses?.isEmpty ?? true) &&
+        (categories?.isEmpty ?? true) &&
+        (types?.isEmpty ?? true) &&
+        (studioTypes?.isEmpty ?? true) &&
         (searchQuery?.isEmpty ?? true);
   }
 }
