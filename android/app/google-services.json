@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "578022157922",
+    "project_id": "platia-de9d0",
+    "storage_bucket": "platia-de9d0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:578022157922:android:3dcd8cf023360b3f5c2b3b",
+        "android_client_info": {
+          "package_name": "com.example.platia"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4axYiSec33ZmIXeQfMURyPIidb0DlUmM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
