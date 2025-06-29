@@ -12,7 +12,12 @@
           "package_name": "com.example.platia"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "578022157922-72vcje562vb4envj8md4jvlh6sb7hcg4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyC4axYiSec33ZmIXeQfMURyPIidb0DlUmM"
@@ -20,7 +25,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "578022157922-72vcje562vb4envj8md4jvlh6sb7hcg4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "578022157922-v9447mp33q6j72slbmama60puurve6ok.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.platia"
+              }
+            }
+          ]
         }
       }
     }

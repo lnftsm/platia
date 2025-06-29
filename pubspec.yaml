@@ -44,6 +44,8 @@ dev_dependencies:
   # Linting and code quality: Kod kalitesi ve linting için gerekli
   flutter_lints: ^6.0.0
 
+  flutter_launcher_icons: ^0.14.4
+
 flutter:
   uses-material-design: true
   generate: true # Code generation for localization and other features: Otomatik kod üretimi için gerekli
@@ -63,3 +65,9 @@ flutter:
           weight: 600
         - asset: assets/fonts/Poppins-Bold.ttf
           weight: 700
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/platia_logo.png"
+  remove_alpha_ios: true
