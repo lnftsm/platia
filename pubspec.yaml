@@ -1,6 +1,6 @@
 name: platia
-description: "A new Flutter project."
-publish_to: 'none'
+description: "Platia: A Flutter app for Pilates & Yoga club management, with class booking, progress tracking and community features."
+publish_to: "none"
 version: 0.1.0
 
 environment:
@@ -10,10 +10,67 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # Flutter localization support: Çoklu dil desteği için gerekli
+  flutter_localizations:
+    sdk: flutter
+  # Google and Firebase dependencies: Google ve Firebase servisleri için gerekli
+  firebase_core: ^3.14.0 # Core Firebase services initialization: Firebase servislerinin başlatılması için gerekli
+  firebase_auth: ^5.6.0 # Firebase authentication: Firebase kimlik doğrulama işlemleri için gerekli
+  cloud_firestore: ^5.6.9 # Cloud Firestore database: Bulut veritabanı işlemleri için gerekli
+  firebase_messaging: ^15.2.7 # Firebase Cloud Messaging: Push bildirimleri için gerekli
+  google_sign_in: ^7.0.0 # Google Sign-In: Google ile giriş yapmak için gerekli
+  google_maps_flutter: ^2.12.3 # Google Maps: Harita entegrasyonu için gerekli
+
+  # State management: Durum yönetimi için gerekli
+  provider: ^6.1.5
+
+  # User preferences: Kullanıcı ayarlarını kalıcı olarak saklamak için gerekli
+  shared_preferences: ^2.5.3
+
+  # Localization and date formatting: Çoklu dil ve tarih/sayı formatlama işlemleri için gerekli
+  intl: ^0.20.2
+
+  # SVG support: SVG formatındaki görselleri uygulamada kullanmak için
+  flutter_svg: ^2.2.0
+
+  # Creating unique identifiers: Benzersiz kimlikler (ID'ler) üretmek için gerekli
+  uuid: ^4.5.1
+
+  # Logging and debugging: Uygulama içi loglama ve hata ayıklama için gerekli
+  logger: ^2.6.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
+
+  # Linting and code quality: Kod kalitesi ve linting için gerekli
+  flutter_lints: ^6.0.0
+
+  flutter_launcher_icons: ^0.14.4
 
 flutter:
   uses-material-design: true
+
+  generate: true # Code generation for localization and other features: Otomatik kod üretimi için gerekli
+  assets:
+    - assets/images/ # Uygulama görselleri için gerekli
+    - assets/icons/ # Uygulama ikonları için gerekli
+    - assets/fonts/ # Özel yazı tipleri için gerekli
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/platia_logo.png"
+  remove_alpha_ios: true
