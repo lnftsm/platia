@@ -3,11 +3,15 @@ plugins {
     id("kotlin-android")
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
+
+    // 
+    id("com.android.application")
+    id("com.google.gms.google-services")
 }
 
 android {
     namespace = "com.example.platia"
-    compileSdk = flutter.compileSdkVersion
+    compileSdk = f35
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
@@ -24,10 +28,11 @@ android {
         applicationId = "com.example.platia"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = flutter.minSdkVersion
-        targetSdk = flutter.targetSdkVersion
-        versionCode = flutter.versionCode
-        versionName = flutter.versionName
+        minSdk = 21
+        targetSdk = 35
+        versionCode = 1
+        versionName = "0.1.0"
+        multiDexEnabled = true
     }
 
     buildTypes {
@@ -37,6 +42,10 @@ android {
             signingConfig = signingConfigs.getByName("debug")
         }
     }
+}
+
+dependencies {
+    implementation 'com.android.support:multidex:1.0.3'
 }
 
 flutter {

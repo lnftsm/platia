@@ -47,6 +47,8 @@ dependencies:
 
   # Displaying local notifications: Yerel bildirimleri göstermek için gerekli
   flutter_local_notifications: ^17.0.0
+  timezone: ^0.9.4
+  image_picker: ^1.1.2
 
 dev_dependencies:
   flutter_test:
