@@ -39,6 +39,15 @@ dependencies:
   # Logging and debugging: Uygulama içi loglama ve hata ayıklama için gerekli
   logger: ^2.6.0
 
+  # Calendar widget: Takvim bileşeni için gerekli
+  table_calendar: ^3.0.9
+
+  # Navigation and routing: Uygulama içi gezinme ve yönlendirme için gerekli
+  go_router: ^13.2.0
+
+  # Displaying local notifications: Yerel bildirimleri göstermek için gerekli
+  flutter_local_notifications: ^17.0.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
